@@ -131,12 +131,6 @@ function Guide() {
           )}</p>
         </section>
 
-        <section className="mt-12 rounded-lg border border-border bg-muted/40 p-6">
-          <h2 className="font-serif text-xl text-foreground">{t("References", "حوالہ جات")}</h2>
-          <p className="mt-2 text-xs text-muted-foreground">
-            Alzheimer's Association · WHO Dementia Fact Sheet · Lancet Commission on Dementia 2020 · NIH National Institute on Aging · Pakistan Alzheimer's Welfare Society · BMJ Best Practice — Dementia · NICE Guidelines NG97 · Mayo Clinic — Alzheimer's Disease · Cleveland Clinic — Sundowning · Karolinska Institutet Caregiver Studies. Full citations available on request.
-          </p>
-        </section>
       </article>
     </Layout>
   );

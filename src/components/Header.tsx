@@ -20,7 +20,7 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur no-print">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
         <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <span className="flex h-9 w-9 items-center justify-center rounded-md bg-primary text-primary-foreground font-serif text-lg">س</span>
+          <span className="flex h-9 w-9 items-center justify-center rounded-md bg-primary text-primary-foreground font-serif text-lg">ص</span>
           <span className="flex flex-col leading-tight">
             <span className="font-serif text-lg font-semibold text-foreground">Sehatnaama</span>
             <span className="font-[var(--font-urdu)] text-xs text-muted-foreground" style={{ fontFamily: "var(--font-urdu)" }}>صحت نامہ</span>
