@@ -36,7 +36,7 @@ function Quiz() {
   const [answers, setAnswers] = useState<(number | null)[]>(Array(QS.length).fill(null));
   const [done, setDone] = useState(false);
 
-  const score = answers.reduce((s, a, i) => s + (a === QS[i].correct ? 1 : 0), 0);
+  const score = answers.reduce<number>((s, a, i) => s + (a === QS[i].correct ? 1 : 0), 0);
   const all = answers.every(a => a !== null);
 
   if (done) {
