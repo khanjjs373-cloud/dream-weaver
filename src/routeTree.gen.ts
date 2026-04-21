@@ -9,8 +9,74 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SymptomCheckerRouteImport } from './routes/symptom-checker'
+import { Route as ResearchRouteImport } from './routes/research'
+import { Route as NormalVsAlzheimersRouteImport } from './routes/normal-vs-alzheimers'
+import { Route as DoctorLetterRouteImport } from './routes/doctor-letter'
+import { Route as DiagnosticQuestionsRouteImport } from './routes/diagnostic-questions'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CommunityRouteImport } from './routes/community'
+import { Route as CaregiverDiaryRouteImport } from './routes/caregiver-diary'
+import { Route as AwarenessQuizRouteImport } from './routes/awareness-quiz'
+import { Route as AlzheimersRouteImport } from './routes/alzheimers'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const SymptomCheckerRoute = SymptomCheckerRouteImport.update({
+  id: '/symptom-checker',
+  path: '/symptom-checker',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResearchRoute = ResearchRouteImport.update({
+  id: '/research',
+  path: '/research',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NormalVsAlzheimersRoute = NormalVsAlzheimersRouteImport.update({
+  id: '/normal-vs-alzheimers',
+  path: '/normal-vs-alzheimers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DoctorLetterRoute = DoctorLetterRouteImport.update({
+  id: '/doctor-letter',
+  path: '/doctor-letter',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DiagnosticQuestionsRoute = DiagnosticQuestionsRouteImport.update({
+  id: '/diagnostic-questions',
+  path: '/diagnostic-questions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CommunityRoute = CommunityRouteImport.update({
+  id: '/community',
+  path: '/community',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CaregiverDiaryRoute = CaregiverDiaryRouteImport.update({
+  id: '/caregiver-diary',
+  path: '/caregiver-diary',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AwarenessQuizRoute = AwarenessQuizRouteImport.update({
+  id: '/awareness-quiz',
+  path: '/awareness-quiz',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AlzheimersRoute = AlzheimersRouteImport.update({
+  id: '/alzheimers',
+  path: '/alzheimers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +85,186 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/alzheimers': typeof AlzheimersRoute
+  '/awareness-quiz': typeof AwarenessQuizRoute
+  '/caregiver-diary': typeof CaregiverDiaryRoute
+  '/community': typeof CommunityRoute
+  '/contact': typeof ContactRoute
+  '/diagnostic-questions': typeof DiagnosticQuestionsRoute
+  '/doctor-letter': typeof DoctorLetterRoute
+  '/normal-vs-alzheimers': typeof NormalVsAlzheimersRoute
+  '/research': typeof ResearchRoute
+  '/symptom-checker': typeof SymptomCheckerRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/alzheimers': typeof AlzheimersRoute
+  '/awareness-quiz': typeof AwarenessQuizRoute
+  '/caregiver-diary': typeof CaregiverDiaryRoute
+  '/community': typeof CommunityRoute
+  '/contact': typeof ContactRoute
+  '/diagnostic-questions': typeof DiagnosticQuestionsRoute
+  '/doctor-letter': typeof DoctorLetterRoute
+  '/normal-vs-alzheimers': typeof NormalVsAlzheimersRoute
+  '/research': typeof ResearchRoute
+  '/symptom-checker': typeof SymptomCheckerRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/alzheimers': typeof AlzheimersRoute
+  '/awareness-quiz': typeof AwarenessQuizRoute
+  '/caregiver-diary': typeof CaregiverDiaryRoute
+  '/community': typeof CommunityRoute
+  '/contact': typeof ContactRoute
+  '/diagnostic-questions': typeof DiagnosticQuestionsRoute
+  '/doctor-letter': typeof DoctorLetterRoute
+  '/normal-vs-alzheimers': typeof NormalVsAlzheimersRoute
+  '/research': typeof ResearchRoute
+  '/symptom-checker': typeof SymptomCheckerRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/alzheimers'
+    | '/awareness-quiz'
+    | '/caregiver-diary'
+    | '/community'
+    | '/contact'
+    | '/diagnostic-questions'
+    | '/doctor-letter'
+    | '/normal-vs-alzheimers'
+    | '/research'
+    | '/symptom-checker'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/alzheimers'
+    | '/awareness-quiz'
+    | '/caregiver-diary'
+    | '/community'
+    | '/contact'
+    | '/diagnostic-questions'
+    | '/doctor-letter'
+    | '/normal-vs-alzheimers'
+    | '/research'
+    | '/symptom-checker'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/alzheimers'
+    | '/awareness-quiz'
+    | '/caregiver-diary'
+    | '/community'
+    | '/contact'
+    | '/diagnostic-questions'
+    | '/doctor-letter'
+    | '/normal-vs-alzheimers'
+    | '/research'
+    | '/symptom-checker'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  AlzheimersRoute: typeof AlzheimersRoute
+  AwarenessQuizRoute: typeof AwarenessQuizRoute
+  CaregiverDiaryRoute: typeof CaregiverDiaryRoute
+  CommunityRoute: typeof CommunityRoute
+  ContactRoute: typeof ContactRoute
+  DiagnosticQuestionsRoute: typeof DiagnosticQuestionsRoute
+  DoctorLetterRoute: typeof DoctorLetterRoute
+  NormalVsAlzheimersRoute: typeof NormalVsAlzheimersRoute
+  ResearchRoute: typeof ResearchRoute
+  SymptomCheckerRoute: typeof SymptomCheckerRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/symptom-checker': {
+      id: '/symptom-checker'
+      path: '/symptom-checker'
+      fullPath: '/symptom-checker'
+      preLoaderRoute: typeof SymptomCheckerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/research': {
+      id: '/research'
+      path: '/research'
+      fullPath: '/research'
+      preLoaderRoute: typeof ResearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/normal-vs-alzheimers': {
+      id: '/normal-vs-alzheimers'
+      path: '/normal-vs-alzheimers'
+      fullPath: '/normal-vs-alzheimers'
+      preLoaderRoute: typeof NormalVsAlzheimersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/doctor-letter': {
+      id: '/doctor-letter'
+      path: '/doctor-letter'
+      fullPath: '/doctor-letter'
+      preLoaderRoute: typeof DoctorLetterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/diagnostic-questions': {
+      id: '/diagnostic-questions'
+      path: '/diagnostic-questions'
+      fullPath: '/diagnostic-questions'
+      preLoaderRoute: typeof DiagnosticQuestionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/community': {
+      id: '/community'
+      path: '/community'
+      fullPath: '/community'
+      preLoaderRoute: typeof CommunityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/caregiver-diary': {
+      id: '/caregiver-diary'
+      path: '/caregiver-diary'
+      fullPath: '/caregiver-diary'
+      preLoaderRoute: typeof CaregiverDiaryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/awareness-quiz': {
+      id: '/awareness-quiz'
+      path: '/awareness-quiz'
+      fullPath: '/awareness-quiz'
+      preLoaderRoute: typeof AwarenessQuizRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/alzheimers': {
+      id: '/alzheimers'
+      path: '/alzheimers'
+      fullPath: '/alzheimers'
+      preLoaderRoute: typeof AlzheimersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +277,17 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  AlzheimersRoute: AlzheimersRoute,
+  AwarenessQuizRoute: AwarenessQuizRoute,
+  CaregiverDiaryRoute: CaregiverDiaryRoute,
+  CommunityRoute: CommunityRoute,
+  ContactRoute: ContactRoute,
+  DiagnosticQuestionsRoute: DiagnosticQuestionsRoute,
+  DoctorLetterRoute: DoctorLetterRoute,
+  NormalVsAlzheimersRoute: NormalVsAlzheimersRoute,
+  ResearchRoute: ResearchRoute,
+  SymptomCheckerRoute: SymptomCheckerRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
