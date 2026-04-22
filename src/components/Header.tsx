@@ -9,7 +9,8 @@ export function Header() {
 
   const links: Array<{ to: string; en: string; ur: string }> = [
     { to: "/", en: "Home", ur: "ہوم" },
-    { to: "/alzheimers", en: "Guide", ur: "گائیڈ" },
+    { to: "/alzheimers", en: "Alzheimer's", ur: "الزائمر" },
+    { to: "/gerd", en: "GERD", ur: "جی ای آر ڈی" },
     { to: "/symptom-checker", en: "Symptom Checker", ur: "علامات کا جائزہ" },
     { to: "/caregiver-diary", en: "Diary", ur: "ڈائری" },
     { to: "/community", en: "Community", ur: "کمیونٹی" },

@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SymptomCheckerRouteImport } from './routes/symptom-checker'
 import { Route as ResearchRouteImport } from './routes/research'
 import { Route as NormalVsAlzheimersRouteImport } from './routes/normal-vs-alzheimers'
+import { Route as GerdRouteImport } from './routes/gerd'
 import { Route as DoctorLetterRouteImport } from './routes/doctor-letter'
 import { Route as DiagnosticQuestionsRouteImport } from './routes/diagnostic-questions'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -35,6 +36,11 @@ const ResearchRoute = ResearchRouteImport.update({
 const NormalVsAlzheimersRoute = NormalVsAlzheimersRouteImport.update({
   id: '/normal-vs-alzheimers',
   path: '/normal-vs-alzheimers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GerdRoute = GerdRouteImport.update({
+  id: '/gerd',
+  path: '/gerd',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DoctorLetterRoute = DoctorLetterRouteImport.update({
@@ -93,6 +99,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/diagnostic-questions': typeof DiagnosticQuestionsRoute
   '/doctor-letter': typeof DoctorLetterRoute
+  '/gerd': typeof GerdRoute
   '/normal-vs-alzheimers': typeof NormalVsAlzheimersRoute
   '/research': typeof ResearchRoute
   '/symptom-checker': typeof SymptomCheckerRoute
@@ -107,6 +114,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/diagnostic-questions': typeof DiagnosticQuestionsRoute
   '/doctor-letter': typeof DoctorLetterRoute
+  '/gerd': typeof GerdRoute
   '/normal-vs-alzheimers': typeof NormalVsAlzheimersRoute
   '/research': typeof ResearchRoute
   '/symptom-checker': typeof SymptomCheckerRoute
@@ -122,6 +130,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/diagnostic-questions': typeof DiagnosticQuestionsRoute
   '/doctor-letter': typeof DoctorLetterRoute
+  '/gerd': typeof GerdRoute
   '/normal-vs-alzheimers': typeof NormalVsAlzheimersRoute
   '/research': typeof ResearchRoute
   '/symptom-checker': typeof SymptomCheckerRoute
@@ -138,6 +147,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/diagnostic-questions'
     | '/doctor-letter'
+    | '/gerd'
     | '/normal-vs-alzheimers'
     | '/research'
     | '/symptom-checker'
@@ -152,6 +162,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/diagnostic-questions'
     | '/doctor-letter'
+    | '/gerd'
     | '/normal-vs-alzheimers'
     | '/research'
     | '/symptom-checker'
@@ -166,6 +177,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/diagnostic-questions'
     | '/doctor-letter'
+    | '/gerd'
     | '/normal-vs-alzheimers'
     | '/research'
     | '/symptom-checker'
@@ -181,6 +193,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   DiagnosticQuestionsRoute: typeof DiagnosticQuestionsRoute
   DoctorLetterRoute: typeof DoctorLetterRoute
+  GerdRoute: typeof GerdRoute
   NormalVsAlzheimersRoute: typeof NormalVsAlzheimersRoute
   ResearchRoute: typeof ResearchRoute
   SymptomCheckerRoute: typeof SymptomCheckerRoute
@@ -207,6 +220,13 @@ declare module '@tanstack/react-router' {
       path: '/normal-vs-alzheimers'
       fullPath: '/normal-vs-alzheimers'
       preLoaderRoute: typeof NormalVsAlzheimersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gerd': {
+      id: '/gerd'
+      path: '/gerd'
+      fullPath: '/gerd'
+      preLoaderRoute: typeof GerdRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/doctor-letter': {
@@ -285,6 +305,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   DiagnosticQuestionsRoute: DiagnosticQuestionsRoute,
   DoctorLetterRoute: DoctorLetterRoute,
+  GerdRoute: GerdRoute,
   NormalVsAlzheimersRoute: NormalVsAlzheimersRoute,
   ResearchRoute: ResearchRoute,
   SymptomCheckerRoute: SymptomCheckerRoute,
